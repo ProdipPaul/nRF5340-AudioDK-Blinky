@@ -22,7 +22,7 @@ To build this project using nRF Connect SDK:
 ## 📡 Devicetree Customization
 Initially, this sample uses the `led0` alias. For my learning, I explored the **Devicetree Visualizer** and mapped the following node:
 * **Direct Node:** `led1_blue` -> **GPIO P0.31**
-
+ 
 ### Hardware Mapping Illustration:
 ![Devicetree Mapping](images/Devicetree_Mapping.png)
 
