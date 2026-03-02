@@ -1,4 +1,4 @@
-# nRF5340 Audio DK - Blue LED Blinky Sample
+# Lesson 01: nRF5340 Audio DK - Blue LED Blinky Sample
 
 ## 📝 Overview
 The Blinky sample blinks an LED forever using the **GPIO API**. This project is specifically configured and modified for the **nRF5340 Audio Development Kit** using the **nRF Connect SDK (v3.2.1)** and **Zephyr RTOS**.
@@ -6,7 +6,7 @@ The Blinky sample blinks an LED forever using the **GPIO API**. This project is 
 The source code demonstrates how to:
 * Get a pin specification from the **Devicetree** as a `gpio_dt_spec`.
 * Configure the GPIO pin as an output.
-* Toggle the pin state based on a defined sleep interval.
+* Toggle the pin state based on a defined sleep interval (1000ms).
 
 ## 🛠 Requirements
 To run this project:
@@ -24,7 +24,7 @@ Initially, this sample uses the `led0` alias. For my learning, I explored the **
 * **Direct Node:** `led1_blue` -> **GPIO P0.31**
 
 ### Hardware Mapping Illustration:
-![Devicetree Mapping](images/Devicetree_Mapping.png)
+![Devicetree Mapping](Lesson-01-Blinky/images/Devicetree_Mapping.png)
 
 ## 📊 Build Logs & Resource Usage
 Upon a successful build, the terminal generates a resource report showing efficient memory management:
@@ -32,4 +32,4 @@ Upon a successful build, the terminal generates a resource report showing effici
 * **RAM Usage:** ~4.7 KB (approx. 1.12% of 416 KB).
 
 ### Success Output:
-![Build Success Log](images/Build_Success_Log.png)
+![Build Success Log](Lesson-01-Blinky/images/Build_Success_Log.png)
