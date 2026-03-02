@@ -24,7 +24,7 @@ Initially, this sample uses the `led0` alias. For my learning, I explored the **
 * **Direct Node:** `led1_blue` -> **GPIO P0.31**
 
 ### Hardware Mapping Illustration:
-![Devicetree Mapping](Lesson-01-Blinky/images/Devicetree%20Mapping.PNG)
+![Devicetree Mapping](images/Devicetree%20Mapping.PNG)
 
 ## 📊 Build Logs & Resource Usage
 Upon a successful build, the terminal generates a resource report showing efficient memory management:
@@ -32,4 +32,4 @@ Upon a successful build, the terminal generates a resource report showing effici
 * **RAM Usage:** ~4.7 KB (approx. 1.12% of 416 KB).
 
 ### Success Output:
-![Build Success Log](Lesson-01-Blinky/images/Build%20Success%20Log.PNG)
+![Build Success Log](images/Build%20Success%20Log.PNG)
