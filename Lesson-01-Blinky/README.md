@@ -32,4 +32,4 @@ Upon a successful build, the terminal generates a resource report showing effici
 * **RAM Usage:** ~4.7 KB (approx. 1.12% of 416 KB).
 
 ### Success Output:
-![Build Success Log](Lesson-01-Blinky/images/Build_Success_Log.png)
+![Build Success Log](Lesson-01-Blinky/images/Build Success Log.PNG)
