@@ -1,35 +1,30 @@
-# nRF5340 Audio DK - Blue LED Blinky Sample
+# Lesson 02: Interrupt-Driven GPIO Control (Button & LED)
 
-## 📝 Overview
-The Blinky sample blinks an LED forever using the **GPIO API**. This project is specifically configured and modified for the **nRF5340 Audio Development Kit** using the **nRF Connect SDK (v3.2.1)** and **Zephyr RTOS**.
+## Overview
+This lesson focuses on the transition from polling to an interrupt-driven approach for handling user inputs. Developed on the nRF5340 Audio Development Kit using nRF Connect SDK v3.2.1 and Zephyr RTOS, the project demonstrates how to utilize the Devicetree for hardware abstraction and manage GPIO callbacks.
 
-The source code demonstrates how to:
-* Get a pin specification from the **Devicetree** as a `gpio_dt_spec`.
-* Configure the GPIO pin as an output.
-* Toggle the pin state based on a defined sleep interval.
+## Technical Implementation
+The implementation follows the Zephyr Device Driver Model to ensure hardware readiness before execution. Key features include:
+- **Asynchronous Input:** Utilizing GPIO interrupts to detect button presses without blocking the main execution loop.
+- **Hardware Abstraction:** Using `DT_NODELABEL` to decouple the application logic from physical pin numbers.
+- **Callback Registration:** Configuring `gpio_callback` structures to handle edge-triggered events.
 
-## 🛠 Requirements
-To run this project:
-* The board must have an LED connected via a GPIO pin.
-* In this project, I have specifically targeted the **Blue LED** (`led1_blue`) which is physically connected to pin **P0.31**.
+## Hardware Mapping
+The peripheral configuration is derived from the board's Devicetree (`.dts`). The primary nodes used are:
+* **Input (Button):** `button3` mapped to **P0.04**.
+* **Output (LED):** `led1_blue` mapped to **P0.31**.
 
-## 🚀 Building and Running
-To build this project using nRF Connect SDK:
-1. Open the project in VS Code.
-2. Create a build configuration for `nrf5340_audio_dk/nrf5340/cpuapp/ns`.
-3. Click on **Build** in the ACTIONS panel.
 
-## 📡 Devicetree Customization
-Initially, this sample uses the `led0` alias. For my learning, I explored the **Devicetree Visualizer** and mapped the following node:
-* **Direct Node:** `led1_blue` -> **GPIO P0.31**
 
-### Hardware Mapping Illustration:
-![Devicetree Mapping](images/Devicetree_Mapping.png)
+### Devicetree Snapshot:
+![Devicetree Mapping](Lesson-02-Button-Interrupt/images/Devicetree_Mapping.PNG)
 
-## 📊 Build Logs & Resource Usage
-Upon a successful build, the terminal generates a resource report showing efficient memory management:
-* **Flash Usage:** ~23.9 KB (approx. 2.36% of 992 KB).
-* **RAM Usage:** ~4.7 KB (approx. 1.12% of 416 KB).
+## Build & Resource Analysis
+The project was successfully compiled for the `nrf5340_audio_dk/nrf5340/cpuapp/ns` target. Memory utilization remains optimized as shown in the build logs below.
 
-### Success Output:
-![Build Success Log](images/Build_Success_Log.png)
+### Build Success Log:
+![Build Success](Lesson-02-Button-Interrupt/images/Build_Log.PNG)
+
+* **Memory Statistics:**
+    * Flash: ~23.9 KB (2.36%)
+    * RAM: ~4.7 KB (1.12%)
