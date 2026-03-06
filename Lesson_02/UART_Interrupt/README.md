@@ -1,4 +1,4 @@
-Handling GPIO Interrupts and UART Logging
+                       **Handling GPIO Interrupts and UART Logging**
 This project demonstrates how to implement hardware interrupts and use the UART console for real-time debugging in Zephyr RTOS. Instead of polling, the system uses an Interrupt Service Routine (ISR) to detect button presses and toggle an LED.
 
 Key Learning Outcomes
