@@ -1,0 +1,10 @@
+/ {
+	aliases {
+		myled = &led1_blue;
+	};
+};
+
+/* Status Management Test  */
+&led1_blue {
+    status = "disabled";
+};
