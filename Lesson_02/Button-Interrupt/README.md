@@ -15,13 +15,13 @@ The peripheral configuration is derived from the board's Devicetree (`.dts`). Th
 * **Output (LED):** `led1_blue` mapped to **P0.31**.
 
 ### Devicetree Snapshot:
-![Devicetree Mapping](Lesson-02-Button-Interrupt/images/Devicetree_Mapping.PNG)
+![Devicetree Mapping](Lesson-02/Button-Interrupt/images/Devicetree_Mapping.PNG)
 
 ## Build & Resource Analysis
 The project was successfully compiled for the `nrf5340_audio_dk/nrf5340/cpuapp/ns` target. Memory utilization remains optimized as shown in the build logs below.
 
 ### Build Success Log:
-![Build Success](Lesson-02-Button-Interrupt/images/Build_Log.PNG)
+![Build Success](Lesson-02/Button-Interrupt/images/Build_Log.PNG)
 
 ### Memory Statistics:
 * **Flash:** ~23.9 KB (2.36%)
